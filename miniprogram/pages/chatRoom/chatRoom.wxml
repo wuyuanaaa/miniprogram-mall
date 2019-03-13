@@ -1,0 +1,52 @@
+<!--miniprogram/pages/chatRoom/chatRoom.wxml-->
+<view class='container'>
+  <scroll-view class='roomContent'>
+    <view wx:for="{{msgList}}" wx:key="{{index}}">
+      <view class='msgItem otherMsg' wx:if="{{item.openid!==openid}}">
+        <view class='avatar'>
+          <image class='avatarImg' src='{{item.avatarUrl}}' lazy-load='true' mode="aspectFit"></image>
+        </view>
+        <view class='msgContent'>
+          <text class='msg-text'>{{item.msgContent}}</text>
+        </view>
+      </view>
+      <view class='msgItem ownMsg' wx:if="{{item.openid===openid}}">
+        <view class='avatar'>
+          <image class='avatarImg' src='{{item.avatarUrl}}' lazy-load='true' mode="aspectFit"></image>
+        </view>
+        <view class='msgContent'>
+          <text class='msg-text'>{{item.msgContent}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='toolbar'>
+    <view class='msgType'>
+      <view wx:if="{{isTextMsg}}" class='ico ico-voice' style='background: url(//m.ykclass.com/zt/zyImages/ykclass/ico-msgType-voice.png) no-repeat center; background-size: cover;'></view>
+      <view wx:if="{{!isTextMsg}}" class='ico ico-text' style='background: url(//m.ykclass.com/zt/zyImages/ykclass/ico-msgType-text.png) no-repeat center; background-size: cover;'></view>
+    </view>
+    <view class='text'>
+      <input
+        class='textInput'
+        style='{{textInputStyle}}'
+        bindfocus='textInputFocus'
+        bindblur='textInputBlur'
+        bindinput='textInputChange'
+        value='{{textInputVal}}'
+        cursor-spacing='20rpx'
+      ></input>
+    </view>
+    <view class='more'>
+      <view wx:if="{{showMore}}" class='ico' style='background: url(//m.ykclass.com/zt/zyImages/ykclass/ico-more.png) no-repeat center; background-size: cover;'></view>
+      <button
+        wx:if="{{!showMore}}"
+        class='sendBtn'
+        type="success"
+        size='20'
+        bindtap='sendMsg'
+      >发送</button>
+    </view>
+  </view>
+  <view class='toolContent'>
+  </view>
+</view>

@@ -1,0 +1,164 @@
+/* pages/userConsole/userConsole.wxss */
+.container {
+  display: flex;
+}
+
+.login-wrapper {
+  padding: 20rpx 0;
+  width: 100%;
+  background: white;
+}
+
+.login-wrapper .login-avatar {
+  margin: 0 auto;
+  padding: 0;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: 0;
+  background-size: 180rpx 180rpx;
+  background-position: center;
+  background-color: white;
+}
+
+.login-wrapper .login {
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.login-wrapper .user-image {
+  display: block;
+  margin: 0 auto;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: 2rpx solid rgba(0, 0, 0, 0.1);
+}
+
+.login-wrapper .user-nickName {
+  display: block;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 40rpx 20rpx;
+  width: 100%;
+  background:  rgba(0, 0, 0, 0.001)
+}
+
+.addData {
+  display: flex;
+}
+
+.addData .add-input {
+  flex: 1;
+  padding-left: 20rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.titleBar {
+  display: flex;
+  margin-top: 40rpx;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.titleBar .status {
+  flex: 1;
+}
+
+.titleBar .status text {
+  display: inline-block;
+  margin-left: 40rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.titleBar .status .active {
+  color: #FF5048;
+}
+
+.lists {
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.lists .nodata {
+  display: block;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  text-align: center;
+  color: #ccc;
+}
+
+.lists .item {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lists .item .item-content {
+  position: relative;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  width: 100%;
+  height: 92rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.lists .item .icon-small {
+  position: relative;
+  bottom: -2rpx;
+  vertical-align: top;
+  padding: 0 10rpx 0;
+}
+
+.lists .item .info {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.lists .item .over {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.lists .item .time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.lists .item .item-del {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 120rpx;
+  text-align: center;
+  background: #f53b60;
+}
+
+.lists .item-del text {
+  flex: 1;
+  font-size: 32rpx;
+  text-align: center;
+  color: #fff;
+}

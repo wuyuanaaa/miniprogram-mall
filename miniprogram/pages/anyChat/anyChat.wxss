@@ -1,0 +1,26 @@
+/* miniprogram/pages/anyChat/anyChat.wxss */
+
+.enterChat {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  margin-top: 300rpx;
+  padding: 0 40rpx;
+}
+
+.enterChat .chatName {
+  box-sizing: border-box;
+  flex: 1;
+  padding-left: 10rpx;
+  height: 80rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx 0 0 10rpx;
+  font-size: 32rpx;
+}
+
+.enterChat .enterChatBtn {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 0 10rpx 10rpx 0;
+  font-size: 32rpx;
+}

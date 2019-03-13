@@ -1,0 +1,66 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx1d9b2ca130ddea6c",
+	"projectname": "oneDay",
+	"libVersion": "2.4.1",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/userConsole/userConsole",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "share",
+					"pathName": "pages/index/index",
+					"query": "shareUserNickName='吴予安'"
+				},
+				{
+					"id": -1,
+					"name": "chat",
+					"pathName": "pages/anyChat/anyChat",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "chatRoom",
+					"pathName": "pages/chatRoom/chatRoom",
+					"query": "roomName=123"
+				}
+			]
+		}
+	}
+}

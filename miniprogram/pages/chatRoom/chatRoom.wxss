@@ -1,0 +1,126 @@
+/* miniprogram/pages/chatRoom/chatRoom.wxss */
+page{
+  height: 100%;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  
+}
+
+.roomContent {
+  box-sizing: border-box;
+  padding:10rpx;
+}
+
+.roomContent .msgItem {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.roomContent .msgItem .avatarImg {
+  width: 68rpx;
+  height: 68rpx;
+  border: none;
+  vertical-align: top;
+}
+
+.roomContent .msgItem .msgContent {
+  flex: 1;
+  max-width: 73%;
+}
+
+.roomContent .msgItem .msg-text {
+  position: relative;
+  display: inline-block;
+  margin: 0 20rpx;
+  padding: 13rpx 20rpx;
+  font-size: 28rpx;
+  line-height: 44rpx;
+  border-radius: 6rpx;
+  background: #fff;
+}
+
+.roomContent .msgItem .msg-text::after {
+  content: '';
+  position: absolute;
+  top: 22rpx;
+  left: -13rpx;
+  border-width: 10rpx 14rpx 10rpx 0;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+}
+
+.roomContent .ownMsg {
+  flex-direction: row-reverse;
+}
+
+.roomContent .ownMsg .msg-text {
+  background: rgb(68, 223, 37);
+}
+
+.roomContent .ownMsg .msg-text::after {
+  left: auto;
+  right: -13rpx;
+  border-width: 10rpx 0 10rpx 14rpx;
+  border-color: transparent transparent transparent rgb(68, 223, 37);
+}
+
+.toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  height: 100rpx;
+  width: 100%;
+  background: rgb(255, 249, 249);
+}
+
+.toolbar .msgType {
+  width: 60rpx;
+  margin-right: 20rpx;
+  padding: 20rpx 0;
+}
+.toolbar .more {
+  width: 80rpx;
+  padding: 20rpx 0;
+  margin-left: 20rpx;
+  overflow: hidden
+}
+
+.toolbar .msgType .ico,
+.toolbar .more .ico {
+  width: 60rpx;
+  height: 60rpx;
+}
+.toolbar .more .ico {
+  margin-left: 20rpx;
+}
+.toolbar .more .sendBtn {
+  padding: 0;
+  font-size: 24rpx;
+  color: #fff;
+  background: rgb(0, 178, 106);
+}
+
+
+.toolbar .text {
+  flex: 1;
+  padding: 20rpx 0;
+}
+
+.toolbar .text .textInput {
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.2)
+}
+
+.toolContent {
+  height: 0;
+  width: 100%;
+  background: rgb(226, 147, 147);
+}

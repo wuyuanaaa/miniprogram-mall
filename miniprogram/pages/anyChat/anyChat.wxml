@@ -1,0 +1,19 @@
+<!--miniprogram/pages/anyChat/anyChat.wxml-->
+<view class='container'>
+  <view class='enterChat'>
+    <input
+      class='chatName'
+      placeholder='进入anyChat'
+      bindinput="chatNameInput"
+    ></input>
+    <button
+      class='enterChatBtn'
+      type='primary'
+      plain='true'
+      open-type="getUserInfo"
+      bindtap='enterChatRoom'
+      >
+      进入
+    </button>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/todo/todo",
+    "pages/anyChat/anyChat",
+    "pages/chatRoom/chatRoom"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "TodoList",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Today",
+        "iconPath": "images/ico-tabBar-home.png",
+        "selectedIconPath": "images/ico-tabBar-home-active.png"
+      },
+      {
+        "pagePath": "pages/anyChat/anyChat",
+        "text": "Chat",
+        "iconPath": "images/ico-tabBar-chat.png",
+        "selectedIconPath": "images/ico-tabBar-chat-active.png"
+      },
+      {
+        "pagePath": "pages/todo/todo",
+        "text": "ToDo",
+        "iconPath": "images/ico-tabBar-todo.png",
+        "selectedIconPath": "images/ico-tabBar-todo-active.png"
+      }
+    ]
+  }
+}

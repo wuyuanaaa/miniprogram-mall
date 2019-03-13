@@ -1,0 +1,81 @@
+<!--pages/userConsole/userConsole.wxml-->
+<wxs src="./time.wxs" module="time"></wxs>
+<view class="container">
+  <view wx:if="{{!logged}}" class='login-wrapper'>
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="login-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <button
+    open-type='getUserInfo'
+    bindgetuserinfo="onGetUserInfo"
+    class='login'
+    >未登录</button>
+  </view>
+  <view wx:else class='login-wrapper'>
+    <image
+    class='user-image'
+    src='{{avatarUrl}}'
+    ></image>
+    <text class='user-nickName'>{{userNickName}}</text>
+  </view>
+
+  <view class='content'>
+    <view class='addData'>
+      <input
+        class='add-input'
+        placeholder='新的安排...'
+        bindinput='setInput'
+        bindconfirm='addList'
+        value='{{inputValue}}'
+      />
+      <button
+        class='mini-btn'
+        type='primary'
+        size='mini'
+        bindtap='addList'
+      >+添加</button>
+    </view>
+    <view class='titleBar'>
+      <view class='status'>
+        <text class="{{tab === '0' ? 'active' : ''}}" data-tab="0" bindtap='changeTab'>全部</text>
+        <text class="{{tab === '1' ? 'active' : ''}}" data-tab="1" bindtap='changeTab'>未完成</text>
+        <text class="{{tab === '2' ? 'active' : ''}}" data-tab="2" bindtap='changeTab'>已完成</text>
+      </view>
+    </view>
+    <scroll-view class='lists' scroll-y>
+      <view wx:if="{{curLists.length < 1}}">
+        <text class="nodata" >事情都做完了呢~</text>
+      </view>
+      <view class='item' wx:for="{{curLists}}" wx:key="index">
+        <view
+          class='item-content'
+          bindtouchstart='touchstart'
+          bindtouchmove='touchmove'
+          bindtouchend='touchend'
+          style="{{item.style}}"
+          data-index="{{index}}"
+        >
+          <icon
+            class='icon-small'
+            type="{{item.done ? 'success' : 'circle'}}"
+            size='20'
+            data-id="{{item.time}}"
+            bindtap='changeDone'
+          ></icon>
+          <text class="info {{item.done ? 'over' : ''}}">{{item.info}}</text>
+          <text class='time'>{{time.formatTime(item.time)}}</text>
+        </view>
+        <view
+          class='item-del'
+          bindtap='delList'
+          data-id="{{item.time}}"
+        >
+          <text>删除</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
