@@ -1,17 +1,46 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
   <scroll-view class='main'>
-    <image class="main-image" src='../../images/index-img.jpg' mode="widthFix"></image>
-    <view class='main-info'>
-      <text class='vol'>VOL.001</text>
-
+    <swiper
+      class='main-banner'
+      indicator-dots="true"
+      autoplay="true"
+      circular="true"
+      indicator-color="rgba(255, 255, 255, .3)"
+      indicator-active-color="rgba(255, 255, 255, .8)"
+    >
+      <block wx:for="{{swipers}}" wx:key="index">
+        <swiper-item>
+          <navigator
+            url="{{item.url}}"
+            open-type="{{item.openType}}"
+          >
+            <image src="{{item.src}}" class="slide-image"/> 
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="main-classify">
+      <view class="classify-item">
+        <image class="item-icon" src="../../static/images/classify-phone.png" />
+        <view class="item-title">手机</view>
+      </view>
+      <view class="classify-item">
+        <image class="item-icon" src="../../static/images/classify-pc.png" />
+        <view class="item-title">电脑</view>
+      </view>
+      <view class="classify-item">
+        <image class="item-icon" src="../../static/images/classify-tv.png" />
+        <view class="item-title">电视</view>
+      </view>
+      <view class="classify-item">
+        <image class="item-icon" src="../../static/images/classify-ai.png" />
+        <view class="item-title">智能</view>
+      </view>
+      <view class="classify-item">
+        <image class="item-icon" src="../../static/images/classify-other.png" />
+        <view class="item-title">配件</view>
+      </view>
     </view>
-    <view class='main-text'>
-      <text class='content'>保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</text>
-    </view>
-    <view class='main-date'>
-      <text class="date-text">Dec 19 2018</text>
-    </view>
-
   </scroll-view>
 </view>

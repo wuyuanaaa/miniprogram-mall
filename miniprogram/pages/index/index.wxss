@@ -1,59 +1,35 @@
 /**index.wxss**/
-
 page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  color: #333;
 }
-
 .container {
   box-sizing: border-box;
-  padding: 20rpx;
 }
-
 .main {
-  padding-bottom: 40rpx;
-  border-radius: 4rpx;
-  border: 1rpx solid rgba(0, 0, 0, 0.05)
+  padding-bottom: 140rpx;
 }
-
-.main .main-image {
-  box-sizing: border-box;
-  padding: 10rpx;
-  width: 100%;
+.main-banner {
+  height: 375rpx;
 }
-
-.main .main-info,
-.main .main-text,
-.main .main-date {
-  padding: 0 20rpx;
+.main-banner .slide-image {
+  width: 750rpx;
+  height: 375rpx;
 }
-
-.main .main-info {
-  margin-top: -20rpx;
+.main-classify {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 10rpx;
 }
-
-.main .main-info .vol {
-  font-size: 26rpx;
-  color: #999;
+.main-classify .classify-item {
+  flex-grow: 1;
+  text-align: center;
 }
-
-.main .main-text {
-  margin-top: 40rpx;
+.main-classify .classify-item .item-icon {
+  width: 80rpx;
+  height: 80rpx;
 }
- 
-.main .main-text .content {
-  font-size: 32rpx;
-  color: #111;
-}
-
-.main .main-date {
-  margin-top: 20rpx;
-}
-
-.main .main-date .date-text {
-  float: right;
-  font-size: 26rpx;
-  color: #999;
+.main-classify .classify-item .item-title {
+  font-size: 24rpx;
+  text-align: center;
+  color: #bbb;
 }

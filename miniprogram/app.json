@@ -6,31 +6,39 @@
     "pages/chatRoom/chatRoom"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFF",
-    "navigationBarTitleText": "TodoList",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#1dad65",
+    "navigationBarTitleText": "mini-mall",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "color": "#bbb",
+    "selectedColor": "#1dad65",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "Today",
-        "iconPath": "images/ico-tabBar-home.png",
-        "selectedIconPath": "images/ico-tabBar-home-active.png"
+        "text": "首页",
+        "iconPath": "static/images/ico-tabBar-home.png",
+        "selectedIconPath": "static/images/ico-tabBar-home-active.png"
       },
       {
         "pagePath": "pages/anyChat/anyChat",
-        "text": "Chat",
-        "iconPath": "images/ico-tabBar-chat.png",
-        "selectedIconPath": "images/ico-tabBar-chat-active.png"
+        "text": "分类",
+        "iconPath": "static/images/ico-tabBar-classify.png",
+        "selectedIconPath": "static/images/ico-tabBar-classify-active.png"
+      },
+      {
+        "pagePath": "pages/anyChat/anyChat",
+        "text": "购物车",
+        "iconPath": "static/images/ico-tabBar-cart.png",
+        "selectedIconPath": "static/images/ico-tabBar-cart-active.png"
       },
       {
         "pagePath": "pages/todo/todo",
-        "text": "ToDo",
-        "iconPath": "images/ico-tabBar-todo.png",
-        "selectedIconPath": "images/ico-tabBar-todo-active.png"
+        "text": "我的",
+        "iconPath": "static/images/ico-tabBar-user.png",
+        "selectedIconPath": "static/images/ico-tabBar-user-active.png"
       }
     ]
   }

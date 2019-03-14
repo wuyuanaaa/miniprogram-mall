@@ -3,7 +3,7 @@ var less = require('gulp-less');
 var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 
-var lessPath = ['./miniprogram/**/**/*.less']
+var lessPath = ['./miniprogram/**/**/*.less','./miniprogram/**/*.less']
 
 gulp.task('less', function () {
   return gulp.src(lessPath)
