@@ -28,7 +28,6 @@ const wxRequest = (params, url) => {
 
 const getHomePageData = (params) => wxRequest(params, host + '/api/home')
 
-
 module.exports = {
   getHomePageData
 }

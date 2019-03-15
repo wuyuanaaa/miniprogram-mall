@@ -2,7 +2,7 @@
 <view class="container">
   <scroll-view class='main'>
     <swiper
-      class='main-banner'
+      class='banner'
       indicator-dots="true"
       autoplay="true"
       circular="true"
@@ -20,27 +20,63 @@
         </swiper-item>
       </block>
     </swiper>
-    <view class="main-classify">
-      <view class="classify-item">
+    <view class="classify">
+      <navigator class="classify-item">
         <image class="item-icon" src="../../static/images/classify-phone.png" />
         <view class="item-title">手机</view>
-      </view>
-      <view class="classify-item">
+      </navigator>
+      <navigator class="classify-item">
         <image class="item-icon" src="../../static/images/classify-pc.png" />
         <view class="item-title">电脑</view>
-      </view>
-      <view class="classify-item">
+      </navigator>
+      <navigator class="classify-item">
         <image class="item-icon" src="../../static/images/classify-tv.png" />
         <view class="item-title">电视</view>
-      </view>
-      <view class="classify-item">
+      </navigator>
+      <navigator class="classify-item">
         <image class="item-icon" src="../../static/images/classify-ai.png" />
         <view class="item-title">智能</view>
-      </view>
-      <view class="classify-item">
+      </navigator>
+      <navigator class="classify-item">
         <image class="item-icon" src="../../static/images/classify-other.png" />
         <view class="item-title">配件</view>
+      </navigator>
+    </view>
+
+    <view class="divider-line"></view>
+
+    <view class="multi-cell clearfix">
+      <view wx:for="{{multiCell}}" wx:key="index" class="cell-item">
+        <navigator>
+          <image class="item-img" src="{{item.src}}" />
+        </navigator>
       </view>
     </view>
+
+    <view class="divider-line"></view>
+
+    <block wx:for="{{programa}}" wx:key="index">
+      <navigator class="programa-banner">
+        <image class="banner-img" src="{{item.banner.src}}" />
+      </navigator>
+      <view class="programa-list">
+        <block wx:for="{{item.list}}"  wx:key="index">
+          <navigator class="list-item">
+            <image class="item-img" src="{{item.src}}" />
+            <view class="item-info">
+              <view class="info-title">{{item.title}}</view>
+              <view class="info-dec">{{item.dec}}</view>
+              <view class="info-price">
+                <text class="price-current">{{item.currentPrice}}</text>
+                <text class="price-dec">{{item.priceDec}}</text>
+                <text class="price-old">{{item.price}}</text>
+              </view>
+            </view>
+            
+          </navigator>
+        </block>
+      </view>
+    </block>
+    
   </scroll-view>
 </view>
