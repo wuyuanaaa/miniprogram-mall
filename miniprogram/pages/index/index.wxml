@@ -15,7 +15,7 @@
             url="{{item.url}}"
             open-type="{{item.openType}}"
           >
-            <image src="{{item.src}}" class="slide-image"/> 
+            <image src="{{item.src}}" class="slide-image"/>
           </navigator>
         </swiper-item>
       </block>
@@ -26,7 +26,7 @@
         <view class="item-title">手机</view>
       </navigator>
       <navigator class="classify-item">
-        <image class="item-icon" src="../../static/images/classify-pc.png" />
+        <image class="item-icon" src="../../static/images/classify-computer.png" />
         <view class="item-title">电脑</view>
       </navigator>
       <navigator class="classify-item">
@@ -52,10 +52,8 @@
         </navigator>
       </view>
     </view>
-
-    <view class="divider-line"></view>
-
     <block wx:for="{{programa}}" wx:key="index">
+      <view class="divider-line"></view>
       <navigator class="programa-banner">
         <image class="banner-img" src="{{item.banner.src}}" />
       </navigator>
@@ -72,11 +70,11 @@
                 <text class="price-old">{{item.price}}</text>
               </view>
             </view>
-            
+
           </navigator>
         </block>
       </view>
     </block>
-    
+
   </scroll-view>
 </view>

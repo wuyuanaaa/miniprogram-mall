@@ -1,35 +1,8 @@
-/**index.wxss**/
 page {
   color: #444;
 }
-.navigator-hover {
-  background: none;
-  opacity: 1;
-}
-image {
-  vertical-align: top;
-}
-view,
-text {
-  line-height: 1;
-}
-view {
-  padding: 0;
-}
-.clearfix::after,
-.clearfix::before {
-  content: '';
-  display: table;
-  clear: both;
-}
-.clearfix {
-  zoom: 1;
-}
 .container {
   box-sizing: border-box;
-}
-.main {
-  padding-bottom: 140rpx;
 }
 .banner {
   height: 375rpx;
